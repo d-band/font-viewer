@@ -1,0 +1,70 @@
+.form-input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:hover {
+    border-color: #c0c4cc;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #1991eb;
+  }
+
+}
+
+.file-input-wrap {
+  display: inline-block;
+  margin-bottom: 0;
+  &, .file-input {
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+  }
+  .file-input {
+    z-index: 2;
+    margin: 0;
+    opacity: 0;
+    &:focus~.file-label {
+      border-color: #1991eb;
+    }
+  }
+  .file-label {
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + .75rem + 2px);
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    &, &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .375rem .75rem;
+      line-height: 1.5;
+      color: #495057;
+    }
+    &:after {
+      bottom: 0;
+      z-index: 3;
+      display: block;
+      height: calc(1.5em + .75rem);
+      content: "Browse";
+      background-color: #e9ecef;
+      border-left: inherit;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}

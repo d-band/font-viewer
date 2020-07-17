@@ -1,0 +1,35 @@
+{
+  "name": "font-viewer",
+  "version": "1.0.0",
+  "description": "opentype fonts viewer",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "opentype.js": "^1.3.3"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "gh-pages": "^3.1.0"
+  },
+  "scripts": {
+    "start": "dool server",
+    "build": "dool build",
+    "prebuild": "node clean.js",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-band/font-viewer.git"
+  },
+  "keywords": [
+    "opentype",
+    "fonts",
+    "viewer"
+  ],
+  "author": "d-band",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-band/font-viewer/issues"
+  },
+  "homepage": "https://github.com/d-band/font-viewer#readme"
+}
