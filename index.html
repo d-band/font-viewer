@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Font Viewer</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="github-corner">
+    <a href="https://github.com/d-band/font-viewer" style="position: absolute; top: 0; right: 0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#fff">
+        <path d="M0 0l115 115h15l12 27 108 108V0z" fill="#151513"/>
+        <path d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16"/>
+        <path d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"/>
+      </svg>
+    </a>
+  </div>
+  <div id="root">
+    <div class="tabs-wrap">
+      <div class="tabs">
+        <div class="tabs-header">
+          <div class="tabs-nav-wrap">
+            <div role="tablist" class="tabs-nav">
+              <div role="tab" tabindex="0" class="tabs-item active">Paste URL</div>
+              <div role="tab" tabindex="1" class="tabs-item">Upload File</div>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-content">
+          <form class="form-url">
+            <input type="text" placeholder="Paste URL here" class="form-input">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div class="form-upload" style="display: none;">
+            <div class="file-input-wrap">
+              <input id="J_file" type="file" class="file-input">
+              <label class="file-label" for="fontFile">Choose file</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul id="J_glyphList"></ul>
+  </div>
+  <div class="message" style="display: none;"></div>
+  <script src="index.js"></script>
+</body>
+</html>
